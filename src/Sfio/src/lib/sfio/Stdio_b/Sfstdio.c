@@ -396,12 +396,6 @@ int main()
 	printf("#undef\tFILE\n");
 	printf("typedef struct _std_s\tFILE;\n\n");
 
-	printf("/* Linux7.2 requires __FILE in wchar.h - we fake it here */\n");
-	printf("#include	\"FEATURE/sfio\"\n");
-	printf("#if _typ___FILE\n");
-	printf("typedef FILE	*__FILE;\n");
-	printf("#endif\n\n");
-
 	/* now get what we need from sfio */
 	printf("#include\t\"sfhdr.h\"\n");
 	printf("#include\t\"FEATURE/stdio\"\n\n");

@@ -6,9 +6,9 @@ D = $L/libcwp.a $L/libpar.a $L/libsu.a
 
 # put /usr/include explicitly before sfio/include to avoid picking
 # up unwanted stdio emulation header.
-CFLAGS = $(OPTC) -I$I -I/usr/include -I../include $(XDRFLAG) $(ENDIANFLAG)
+CFLAGS = $(OPTC) -I$I -I/usr/include -I../include $(XDRFLAG) $(ENDIANFLAG) -I/usr/include/tirpc
 
-LFLAGS= $(PRELFLAGS) -L../lib -L$L -lsfio -lsu -lpar -lcwp -lm $(POSTLFLAGS)
+LFLAGS= $(PRELFLAGS) -L../lib -L$L -lsfio -lsu -lpar -lcwp -lm $(POSTLFLAGS) -ltirpc
 
 
 PROGS =			\
