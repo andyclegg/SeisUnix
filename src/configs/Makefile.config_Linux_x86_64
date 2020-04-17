@@ -93,7 +93,7 @@ OPTC = -g  -std=c99 -Wall -pedantic -Wno-long-long -ltirpc
 CFLAGS = -I$I $(OPTC) $(CWP_FLAGS) -D_BSD_SOURCE -D_POSIX_SOURCE
 
 FC = gfortran
-FOPTS = -g 
+FOPTS = -g -std=legacy
 FFLAGS = $(FOPTS) -ffixed-line-length-none
 
 C++FLAGS = -I$I $(OPTC) $(CWP_FLAGS)
